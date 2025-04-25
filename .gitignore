@@ -1,0 +1,36 @@
+# Terraform 파일
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+!example.tfvars
+!dev.tfvars
+!prod.tfvars
+!common.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+*tfplan*
+
+# SSH 키 (보안상 Git에 포함시키지 않음)
+**/ssh/*
+*.pem
+*.key
+
+# 로그
+*.log
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# 에디터 설정
+.vscode/
+.idea/
+*.swp
+*.swo
