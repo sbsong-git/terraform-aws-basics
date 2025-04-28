@@ -68,8 +68,7 @@ resource "aws_subnet" "private" {
 # EIP for NAT Gateway
 resource "aws_eip" "nat" {
   count = var.enable_nat_gateway ? (var.one_nat_gateway_per_az ? length(var.public_subnet_cidrs) : 1) : 0
-  domain = "vpc"
-  
+    
   tags = merge(
     var.tags,
     {
