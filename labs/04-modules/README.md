@@ -12,17 +12,20 @@
 ## 실습 단계
 
 ### 1. 파일 구조 살펴보기
+
 현재 폴더에 다음 파일들과 디렉토리가 있습니다:
+
 - `main.tf`: 메인 구성 파일 (루트 모듈)
 - `variables.tf`: 변수 정의 파일
 - `outputs.tf`: 출력 값 정의 파일
 - `terraform.tfvars`: 변수 값 설정 파일
 - `modules/`: 모듈 디렉토리
-  - `network/`: 네트워크 모듈 (완성됨)
-  - `security/`: 보안 모듈 (작성 필요)
-  - `game-server/`: 게임 서버 모듈 (작성 필요)
+    - `network/`: 네트워크 모듈 (완성됨)
+    - `security/`: 보안 모듈 (작성 필요)
+    - `game-server/`: 게임 서버 모듈 (작성 필요)
 
 ### 2. Security 모듈 작성
+
 `modules/security/` 디렉토리에 다음 파일들을 작성해 주세요:
 
 - `variables.tf`: 입력 변수 정의
@@ -30,6 +33,7 @@
 - `outputs.tf`: 출력 값 정의
 
 ### 3. Game Server 모듈 작성
+
 `modules/game-server/` 디렉토리에 다음 파일들을 작성해 주세요:
 
 - `variables.tf`: 입력 변수 정의
@@ -37,6 +41,7 @@
 - `outputs.tf`: 출력 값 정의
 
 ### 4. 루트 모듈 완성하기
+
 `main.tf` 파일에서 모듈을 호출하는 부분을 완성해 주세요:
 
 - Network 모듈 호출
@@ -54,9 +59,11 @@ terraform plan
 
 # 적용
 terraform apply
+
 ```
 
 ### 6. 다른 환경 설정 추가
+
 `environments/` 폴더에 `dev.tfvars`와 `prod.tfvars` 파일을 작성해 주세요:
 
 - 개발 환경 설정
@@ -70,16 +77,20 @@ terraform apply -var-file=environments/dev.tfvars
 
 # 프로덕션 환경 계획 검토
 terraform plan -var-file=environments/prod.tfvars
+
 ```
 
 ### 8. 리소스 삭제
+
 실습이 끝나면 생성된 리소스를 삭제합니다:
 
 ```bash
 terraform destroy
+
 ```
 
 ## 도전 과제 (선택사항)
+
 - 데이터베이스 모듈을 추가하여 게임 데이터 저장 인프라 구성하기
 - 모니터링 모듈을 추가하여 CloudWatch 알람 및 대시보드 구성하기
 - 스케일링 정책을 적용한 오토스케일링 그룹 모듈 작성하기
