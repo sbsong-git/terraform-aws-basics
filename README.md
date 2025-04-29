@@ -40,7 +40,7 @@
 
 ```bash
 # 저장소 클론
-git clone https://github.com/sagawa8b/terraform-aws-basics.git
+git clone https://github.com/sbsong-git/terraform-aws-basics.git
 cd terraform-aws-basics
 
 # 실습 디렉토리로 이동
